@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "rast-datagrid:build:production"
+              "buildTarget": "rast-datagrid:build:production"
             },
             "development": {
-              "browserTarget": "rast-datagrid:build:development"
+              "buildTarget": "rast-datagrid:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "rast-datagrid:build"
+            "buildTarget": "rast-datagrid:build"
           }
         },
         "test": {
