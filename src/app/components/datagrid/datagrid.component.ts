@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { SocialDatas } from 'src/app/models/social-datas.interface';
+import { SocialDatas } from '../../models/social-datas.interface';
+import { NotificationService } from '../../services/notification.service';
 
 @Component({
     selector: 'datagrid',
@@ -13,10 +14,14 @@ export class DatagridComponent {
 
     rowNumber: number = 4;
 
+    constructor(
+        private notificationService: NotificationService
+    ) { }
+
     changeRowNumber(number: number) {
         if (this.rowNumber + number < 1) {
-            //toast message
-            return
+            this.notificationService.showError('Satır sayısı 1\'den küçük olamaz.');
+            return;
         }
         this.rowNumber += number;
     }
