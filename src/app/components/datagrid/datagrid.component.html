@@ -12,7 +12,10 @@
             </span>
         </div>
 
-        <button (click)="openModal= true" class="flex items-center gap-4 text-white px-6 py-2 w-52 rounded-full bg-[#744BFC]">
+        <button 
+            (click)="openModal= true" 
+            class="flex items-center gap-4 text-white px-6 py-2 w-52 rounded-full bg-[#744BFC]"
+        >
             <img src="assets/icons/plus.svg" class="w-4" alt="plus">
             Yeni Hesap Ekle
         </button>
@@ -55,11 +58,19 @@
             </div>
         </div>
         <div class="flex gap-2 items-center">
-            <img [ngClass]="currentPage == 1 ? 'gray-filter cursor-not-allowed' : '' " (click)="changePageNumber(-1)" class="cursor-pointer pr-1" src="assets/icons/left.svg">
+            <img 
+                [ngClass]="currentPage == 1 ? 'gray-filter cursor-not-allowed' : '' " 
+                (click)="changePageNumber(-1)" class="cursor-pointer pr-1" 
+                src="assets/icons/left.svg"
+            >
             <span class="max-w-fit p-1 px-2 w-8 rounded text-center border border-gray-300 bg-white">{{currentPage}}</span>
             <span class="text-gray-500 text-sm font-thin">of</span>
             <span class="font-medium" >{{totalPages}}</span>
-            <img [ngClass]="currentPage == totalPages ? 'gray-filter cursor-not-allowed' : '' " (click)="changePageNumber(1)" class="cursor-pointer pl-1" src="assets/icons/right.svg">
+            <img 
+                [ngClass]="currentPage == totalPages ? 'gray-filter cursor-not-allowed' : '' " 
+                (click)="changePageNumber(1)" class="cursor-pointer pl-1" 
+                src="assets/icons/right.svg"
+            >
         </div>
     </div>
 </div>
