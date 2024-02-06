@@ -1,0 +1,27 @@
+Öncelikle projenin tasarımını inceledikten sonra verilen isterleri değerlendirdim.
+Projede önemli gördüğüm noktalar: 
+Proje Structure'ı, bağımlıkları ayırmak için servis kullanımı ve karmaşık kod bloklarının önüne geçmek için UI'ı componentlere ayırma.
+
+Verilen isterlere göre şu adımları izleyerek projeyi bitirdim:
+
+1. En güncel angular sürümüyle projeyi yapmak için angular versiyonunu 17'ye yükselttim,
+bunu yaparken typescript, zonejs gibi bağımlılıklarını da uygun olarak güncelledim.
+
+2. Projede standalone componentler kullandım ve module yapısını kaldırdım. 
+Burdaki amacım biri kod karmaşıklığını azaltmak ve uzun vadede standalone componentin performans avantajlarından yararlanmak.
+
+3. Daha hızlı css yazabilmek için tailwindcss kütüphanesini tercih ettim.
+
+4. Project structure'ını app klasörü altında components, models, services diye ayırdım
+standalone component'ler ile bu yapıyı kullanmamdaki amaç kullandığım servis, model vb yapıların bir arada bulunmasını istediğim için
+
+5. Navbar componenti yaparken responsive designa uygun olacak şekilde, küçük ekranlarda hamburger menu gösterimi yaptım.
+
+6. Servis yapısındaki kullanmamızdaki amaçlardan biri bağımlılıkları kod bloklarından ayırmak,
+bundan dolayı localStorage için servis yazdım, ilerleyen zamanlarda farklı veritabanlarına da kaydedilip projenin genişletilebilirliğini arttırmak için.
+
+7. Kullanıcıların UX arttırmak için bildirim mekanizması ekledim. Bunu da yine aynı mantıkla servis kullanarak yaptım.
+
+8. Yeni veri eklemek için modal componenti oluşturdum.
+
+9. Projenin tamamını responsive olarak uyguladım. Kullanıcı datalarını local'e kaydettim. Veri alışverişleri için model interface'ı yazdım. Fonksiyonlar genel olarak kısa olduğu için yorum satırı eklemedim.
