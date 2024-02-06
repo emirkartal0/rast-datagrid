@@ -9,15 +9,24 @@
     </div>
 
     <div class="flex max-lg:hidden gap-4 pr-4">
-        <img src="assets/icons/youtube.svg" class="cursor-pointer" >
-        <img src="assets/icons/instagram.svg" class="cursor-pointer">
-        <img src="assets/icons/be.svg" class="cursor-pointer">
-        <img src="assets/icons/linkedin.svg" class="cursor-pointer">
+        <a href="https://rastmobile.com/en/" target="_blank">
+            <img src="assets/icons/youtube.svg" class="cursor-pointer" >
+        </a>
+        <a href="https://www.instagram.com/mobilerast/" target="_blank">
+            <img src="assets/icons/instagram.svg" class="cursor-pointer">
+        </a>
+        <a href="https://rastmobile.com/en/" target="_blank">
+            <img src="assets/icons/be.svg" class="cursor-pointer">
+        </a>
+        <a href="https://www.linkedin.com/company/rastmobile/" target="_blank">
+            <img src="assets/icons/linkedin.svg" class="cursor-pointer">
+        </a>
     </div>
     <div class="lg:hidden">
         @if (isMenuOpen) {
             <img src="assets/icons/close.svg" class="w-5 cursor-pointer" (click)="toggleMenu()">
-        } @else {
+        } 
+        @else {
             <img src="assets/icons/menu.svg" class="w-8 cursor-pointer" (click)="toggleMenu()">
         }
     </div>
