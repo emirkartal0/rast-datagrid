@@ -18,6 +18,7 @@ export class DatagridComponent {
     rowNumber: number = 4;
     openModal: boolean = false;
     currentPage: number = 1;
+    searchText: string = '';
 
     get accountDatas(): AccountData[] {
         return this.localStorageService.getSocialDatas();
@@ -25,6 +26,14 @@ export class DatagridComponent {
 
     get paginatedDatas(): AccountData[] {
         return this.accountDatas.slice((this.currentPage - 1) * this.rowNumber, this.currentPage * this.rowNumber);
+    }
+
+    get filteredDatas(): AccountData[] {
+        if (this.searchText === '') return this.paginatedDatas;
+        this.currentPage = 1;
+        return this.accountDatas.filter((data: AccountData) => {
+            return data.name.toLowerCase().includes(this.searchText.toLowerCase());
+        });
     }
 
     get totalPages(): number {
@@ -45,7 +54,7 @@ export class DatagridComponent {
     }
 
     changePageNumber(number: number) {
-        if (this.currentPage + number > 5 || this.currentPage + number < 1) return;
+        if (this.currentPage + number > this.totalPages || this.currentPage + number < 1) return;
         this.currentPage += number;
     }
 
