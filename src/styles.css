@@ -2,3 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.gray-filter {
+    filter: invert(40%) sepia(6%) saturate(7%) hue-rotate(355deg) brightness(96%) contrast(92%);
+}
