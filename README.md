@@ -4,7 +4,8 @@ This project is currently using [Angular CLI](https://github.com/angular/angular
 I explained how I progressed through the project in the `proje-adımları.txt` file
 
 ## Requirements
-Angular v17 supports node.js versions: v18.13.0 and newer 
+Angular v17 supports node.js versions: v18.13.0 and newer
+
 Angular v17 supports TypeScript version 5.2 or later
 
 ## Setup Scripts
