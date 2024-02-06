@@ -1,4 +1,35 @@
-<p>navbar works!</p>
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-</h1>
+<div class="flex items-center justify-between h-20 gap-2 py-6 px-12">
+    <img src="assets/icons/rast-mobile.svg" alt="logo">
+    
+    <div class="flex gap-20 mx-auto max-lg:hidden">
+        <span>Hakkımızda</span>
+        <span>Jüri - Yarışma Yazılımı</span>
+        <span>Word Ninja</span>
+        <span>Word Pyramids</span>
+    </div>
+
+    <div class="flex max-lg:hidden gap-4 pr-4">
+        <img src="assets/icons/youtube.svg" class="cursor-pointer" >
+        <img src="assets/icons/instagram.svg" class="cursor-pointer">
+        <img src="assets/icons/be.svg" class="cursor-pointer">
+        <img src="assets/icons/linkedin.svg" class="cursor-pointer">
+    </div>
+    <div class="lg:hidden">
+        @if (isMenuOpen) {
+            <img src="assets/icons/close.svg" class="w-5 cursor-pointer" (click)="toggleMenu()">
+        } @else {
+            <img src="assets/icons/menu.svg" class="w-8 cursor-pointer" (click)="toggleMenu()">
+        }
+    </div>
+</div>
+
+@if(isMenuOpen) {
+    <div class="absolute top-20 lg:hidden w-full flex justify-center border-b pb-2" >
+        <div class="flex flex-col gap-3">
+            <span>Hakkımızda</span>
+            <span>Jüri - Yarışma Yazılımı</span>
+            <span>Word Ninja</span>
+            <span>Word Pyramids</span>
+        </div>
+    </div>
+}
