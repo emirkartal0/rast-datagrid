@@ -1,0 +1,27 @@
+@if(isOpen) {
+    <div class="absolute top-0 left-0 w-screen h-screen bg-black/70 z-10">
+        <div class="absolute top-[30%] lg:left-[35%] left-[5%] bg-white md:w-96 w-80 h-[400px] rounded-xl shadow-xl p-4 z-20">
+            <form #f="ngForm" (ngSubmit)="saveData(f)" class="flex flex-col gap-4">
+                <div class="w-full flex justify-end">
+                    <img (click)="closeModal()" src="assets/icons/close.svg" class="w-5 cursor-pointer">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="pl-2">Sosyal Medya Linki</span>
+                    <input name="url" ngModel type="text" class="border border-gray-300 h-10 px-4 rounded-full">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="pl-2">Sosyal Medya Adı</span>
+                    <input name="name" ngModel type="text" class="border border-gray-300 h-10 px-4 rounded-full">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="pl-2">Açıklama</span>
+                    <input name="description" ngModel type="text" class="border border-gray-300 h-10 px-4 rounded-full">
+                </div>
+                <div class="flex gap-4 justify-end my-4">
+                    <button (click)="closeModal()" class="bg-[#F5F7FF] text-[#744BFC] px-5 py-2 rounded-full">Vazgeç</button>
+                    <button type="submit" class="bg-[#744BFC] text-white px-5 py-2 rounded-full">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+}

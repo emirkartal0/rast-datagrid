@@ -12,7 +12,7 @@
             </span>
         </div>
 
-        <button class="flex items-center gap-4 text-white px-6 py-2 w-52 rounded-full bg-[#744BFC]">
+        <button (click)="openModal= true" class="flex items-center gap-4 text-white px-6 py-2 w-52 rounded-full bg-[#744BFC]">
             <img src="assets/icons/plus.svg" class="w-4" alt="plus">
             Yeni Hesap Ekle
         </button>
@@ -29,16 +29,16 @@
             </thead>
 
             <tbody>
-                @for (item of socialDatas; track $index; let even = $even) {
+                @for (item of accountDatas; track $index; let even = $even) {
                 <tr [ngClass]="even ? 'bg-white/70' : '' ">
                     <td class="lg:px-6 md:px-3 py-4 border-r-2 max-md:text-xs border-[#C4CEE5]">{{item.url}}</td>
                     <td class="lg:px-6 md:px-3 py-4 border-r-2 max-md:text-xs border-[#C4CEE5]">{{item.name}}</td>
                     <td class="lg:px-6 md:px-3 py-4 max-md:text-xs border-[#C4CEE5]">{{item.description}}</td>
                 </tr>
                 } @empty {
-                <tr>
-                    <td class="p-4 text-center font-semibold" colspan="3">Veri bulunamadı</td>
-                </tr>
+                    <tr>
+                        <td class="p-4 text-center font-semibold" colspan="3">Veri bulunamadı</td>
+                    </tr>
                 }
             </tbody>
         </table>
@@ -54,3 +54,5 @@
         </div>
     </div>
 </div>
+
+<add-account-modal [isOpen]="openModal" (modalChangeEvent)="openModal= false" ></add-account-modal>

@@ -1,4 +1,4 @@
-export interface SocialDatas {
+export interface AccountData {
     url: string;
     name: string;
     description: string;
