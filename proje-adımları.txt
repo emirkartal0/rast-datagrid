@@ -10,7 +10,7 @@ bunu yaparken typescript, zonejs gibi bağımlılıklarını da uygun olarak gü
 2. Projede standalone componentler kullandım ve module yapısını kaldırdım. 
 Burdaki amacım biri kod karmaşıklığını azaltmak ve uzun vadede standalone componentin performans avantajlarından yararlanmak.
 
-3. Daha hızlı css yazabilmek için tailwindcss kütüphanesini tercih ettim.
+3. Daha hızlı css yazabilmek için tailwindcss kütüphanesini tercih ettim. UI kit kütüphaneleri yerine tailwindcss tarzındanki ui-utilities kütüphaneleri ile daha özgürce tasarımlar ortaya çıkarmaya çalıştım
 
 4. Project structure'ını app klasörü altında components, models, services diye ayırdım
 standalone component'ler ile bu yapıyı kullanmamdaki amaç kullandığım servis, model vb yapıların bir arada bulunmasını istediğim için
